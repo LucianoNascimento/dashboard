@@ -1,6 +1,8 @@
-@tailwind base;
+/*import 'leaflet/dist/leaflet.css';
+
+/*@tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;*/
 
 :root {
   --background: #ffffff;
@@ -18,11 +20,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--fonte-normal);
 }
 
 :root{
   --cor-primaria: #43bd8e;
   --cor-azul-claro: #d0f0fd;
+  --cor-azul-suave:#9cb2df;
   --cor-branca: #FFFF;
   --cor-fundo-escuro: #040203;
   --cor-fundo-cinza-escuro: #282828;
@@ -36,5 +40,5 @@ body {
   --fonte-extra-grande: 4.5rem;
   --fonte-grande: 3rem;
   --fonte-medio: 2.4rem;
-  --fonte-normal: 1.6rem;
+  --fonte-normal: 20px;
 }

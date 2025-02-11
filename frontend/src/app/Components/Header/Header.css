@@ -1,35 +1,37 @@
-.sidebar {
-    width: 250px;
+.container-header {
+    display: flex;
+    align-items: center;
     background-color: var(--cor-azul-escuro);
     padding: 20px;
-    height: 100vh;
-    position: fixed;
+    height: 70px;
 }
-.sidebar h2 {
+.container-header h2 {
     color: var(--cor-branca);
     text-decoration: none; /* Sem sublinhado por padrão */
     transition: color 0.3s ease, text-decoration 0.3s ease; /* Suaviza transições */
-    padding: 5px 10px;
+    
 }
-.sidebar h2:hover {
+.container-header h2:hover {
     color: var(--cor-primaria); /* Cor do link no hover */
     text-decoration: underline; /* Aplica o sublinhado */
 }
-.sidebar ul {
+.container-header ul  {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
     list-style-type: none;
-    padding: 0;
+    width: 100%;
+    gap: 30px;
 }
-.sidebar ul li {
-    padding: 10px 0;
-}
-.sidebar ul li a {
+
+.container-header ul li a {
     color: var(--cor-branca); /* Cor padrão do link */
     text-decoration: none; /* Sem sublinhado por padrão */
     transition: color 0.3s ease, text-decoration 0.3s ease; /* Suaviza transições */
     padding: 5px 10px; /* Adiciona um pouco de espaço ao redor do link */
 }
 
-.sidebar ul li a:hover {
+.container-header ul li a:hover {
     color: var(--cor-primaria); /* Cor do link no hover */
     text-decoration: underline; /* Aplica o sublinhado */
 }

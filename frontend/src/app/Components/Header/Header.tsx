@@ -2,10 +2,8 @@ import './Header.css';
 
 const HeaderComponent: React.FC = () => {
     return (
-        <aside>
-
-            <div className='sidebar' id="sidebar">
-                <h2>Menu</h2>
+        <header>
+            <div className='container-header' id="sidebar">
                 <ul>
                     <li><a href="#">Dashboard</a></li>
                     <li><a href="#">Relatórios</a></li>
@@ -15,8 +13,9 @@ const HeaderComponent: React.FC = () => {
                     <li><a href="#">Feedback de Clientes</a></li>
                 </ul>
             </div>
-        </aside>
+        </header>
     );
 }
 
 export default HeaderComponent;
+

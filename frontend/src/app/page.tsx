@@ -1,9 +1,14 @@
 import "./globals.css";
-import HeaderComponentComponent from "./Components/Header/Header";
+import HeaderComponent from "./Components/Header/Header";
+import FooterComponent from "./Components/Footer/Footer";
+import AsideDashboard from "./Aside/Aside";
+import 'leaflet/dist/leaflet.css';
 export default function Home() {
   return (
     <div>
-      <HeaderComponentComponent/>
+        <HeaderComponent/>
+        <AsideDashboard/>
+        <FooterComponent/>
     </div>
   );
 }
