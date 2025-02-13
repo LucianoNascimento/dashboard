@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 import React from "react";
 import HeaderComponent from "./Components/Header/Header";
@@ -13,7 +14,7 @@ export default function Home() {
         <HeaderComponent/>
           <Routes>
             <Route path= "/dashboard" element= {<CreateDashboard/>}/>
-          </Routes>*/
+          </Routes>
         <AsideDashboard/>
         <FooterComponent/>
       </Router>  
