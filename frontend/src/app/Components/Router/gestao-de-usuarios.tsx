@@ -4,12 +4,12 @@ import "./router.css";
 const CreateGestaoUsuarios: React.FC = () => {
   return (
     <>
-      <header>
-        <h1>Gestão de Usuários</h1>
-        <p>Administre os usuários do sistema: adicione, edite ou remova usuários conforme necessário.</p>
-      </header>
-
-      <section className="content">
+      <div className="container-router">
+        <div>
+          <h1>Gestão de Usuários</h1>
+          <p>Administre os usuários do sistema: adicione, edite ou remova usuários conforme necessário.</p>
+        </div>
+      
         <div className="user-list">
           <h2>Lista de Usuários</h2>
           <table>
@@ -65,7 +65,7 @@ const CreateGestaoUsuarios: React.FC = () => {
             <button type="submit">Adicionar Usuário</button>
           </form>
         </div>
-      </section>
+      </div>
     </>
   );
 };

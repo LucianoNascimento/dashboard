@@ -5,12 +5,11 @@ import "./router.css";
 const CreateDashboard: React.FC = () => {
   return (
     <>
-      <header>
-        <h1>Dashboard</h1>
-        <p>Bem-vindo ao painel de controle, onde você pode ver suas principais métricas e informações!</p>
-      </header>
-
-      <section className="content">
+      <div className="container-router">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Bem-vindo ao painel de controle, onde você pode ver suas principais métricas e informações!</p>
+        </div>
         <div className="card">
           <h2>Métricas Gerais</h2>
           <p>Aqui estão as métricas mais recentes do seu sistema.</p>
@@ -19,7 +18,7 @@ const CreateDashboard: React.FC = () => {
           <h2>Relatórios</h2>
           <p>Relatórios detalhados sobre o desempenho da plataforma.</p>
         </div>
-      </section>
+      </div>
     </>
   );
 };

@@ -3,12 +3,11 @@ import "./router.css"
 const CreateRelatorios:React.FC = () =>{
     return (
         <>
-        <header>
-        <h1>Relatórios</h1>
-        <p>Confira os relatórios detalhados sobre o desempenho do sistema.</p>
-        </header>
-
-        <section className="content">
+        <div className="container-router">
+            <div>
+                <h1>Relatórios</h1>
+                <p>Confira os relatórios detalhados sobre o desempenho do sistema.</p>
+            </div>
             <div className="card">
                 <h2>Relatório de Vendas</h2>
                 <p>Visualize o desempenho de vendas durante o mês passado.</p>
@@ -24,8 +23,9 @@ const CreateRelatorios:React.FC = () =>{
                 <p>Examine o feedback coletado dos usuários e clientes.</p>
                 <button>Ver Relatório</button>
             </div>
-        </section>
+        </div>
     </>
     );
 }
 export default CreateRelatorios
+

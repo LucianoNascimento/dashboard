@@ -4,12 +4,13 @@ import "./router.css";
 const CreateConfiguracoes: React.FC = () => {
   return (
     <>
-      <header>
-        <h1>Configurações</h1>
-        <p>Aqui você pode ajustar suas preferências e configurações do sistema.</p>
-      </header>
+      <div className="container-router">
+        <div>
+          <h1>Configurações</h1>
+          <p>Aqui você pode ajustar suas preferências e configurações do sistema.</p>
+        </div>
 
-      <section className="content">
+      
         <div className="settings-form">
           <h2>Alterar Senha</h2>
           <form>
@@ -46,7 +47,7 @@ const CreateConfiguracoes: React.FC = () => {
             <button type="submit">Salvar Configurações</button>
           </form>
         </div>
-      </section>
+      </div>
     </>
   );
 };

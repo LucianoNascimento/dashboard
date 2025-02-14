@@ -1,7 +1,6 @@
 
-.card {
-    background-color: #fff;
-    width: 300px;
+.container-router{
+    background-color: var(--cor-fundo-cinza-escuro);
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;

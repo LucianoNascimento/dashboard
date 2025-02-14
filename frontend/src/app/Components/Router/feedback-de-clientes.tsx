@@ -4,12 +4,11 @@ import "./router.css";
 const CreateFeedbackClientes: React.FC = () => {
   return (
     <>
-      <header>
-        <h1>Feedback de Clientes</h1>
-        <p>Aqui você pode ver os comentários e opiniões dos nossos clientes.</p>
-      </header>
-
-      <section className="content">
+      <div className="container-router">
+        <div>
+          <h1>Feedback de Clientes</h1>
+          <p>Aqui você pode ver os comentários e opiniões dos nossos clientes.</p>
+        </div>
         {/* Exibição de feedbacks */}
         <div className="feedback-list">
           <h2>Comentários Recentes</h2>
@@ -47,7 +46,7 @@ const CreateFeedbackClientes: React.FC = () => {
             <button type="submit">Enviar Feedback</button>
           </form>
         </div>
-      </section>
+      </div>
     </>
   );
 };

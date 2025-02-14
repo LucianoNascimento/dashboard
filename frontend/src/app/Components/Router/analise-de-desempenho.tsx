@@ -4,12 +4,12 @@ import "./router.css";
 const CreateAnaliseDesempenho: React.FC = () => {
   return (
     <>
-      <header>
-        <h1>Análise de Desempenho</h1>
-        <p>Acompanhe o desempenho do sistema com métricas chave e gráficos.</p>
-      </header>
-
-      <section className="content">
+    <div className="container-router">
+        <div>
+          <h1>Análise de Desempenho</h1>
+          <p>Acompanhe o desempenho do sistema com métricas chave e gráficos.</p>
+        </div>
+     
         <div className="performance-metrics">
           <h2>Métricas de Desempenho</h2>
           <div className="metric">
@@ -32,7 +32,7 @@ const CreateAnaliseDesempenho: React.FC = () => {
             <p>Aqui pode ser um gráfico de desempenho (Exemplo: taxa de conversão ao longo do tempo).</p>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

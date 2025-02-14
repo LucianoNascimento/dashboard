@@ -66,8 +66,8 @@ const AsideDashboard: React.FC = () => {
           </div>
         </div>
       </aside>
-
-      {/* O MapComponent está agora sendo exibido ao lado do Aside */}
+      
+      {/* O MapComponent agora está sendo exibido ao lado do Aside */}
       <div className="map-container">
         <MapComponent center={center} />
       </div>

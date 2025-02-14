@@ -12,6 +12,7 @@ import CreateGestaoUsuarios from "./Components/Router/gestao-de-usuarios"
 import CreateConfiguracoes from "./Components/Router/configuracoes";
 import CreateAnaliseDesempenho from "./Components/Router/analise-de-desempenho";
 import CreateFeedbackClientes from "./Components/Router/feedback-de-clientes";
+import SectionComponent from "./Components/Section/Section";
 
 
 export default function Home() {
@@ -27,7 +28,8 @@ export default function Home() {
             <Route path="/configuracoes" element= {<CreateConfiguracoes/>}/>
             <Route path="/feedback-clientes" element= {<CreateFeedbackClientes/>}/>
           </Routes>
-        <AsideDashboard/>
+       
+        <SectionComponent/>
         <FooterComponent/>
       </Router>  
     </div>
