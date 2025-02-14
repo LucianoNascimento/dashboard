@@ -1,10 +1,6 @@
 .container-aside {
-    display: flex;
-    flex-direction: column; /* Garante que os itens dentro do container sejam empilhados verticalmente */
-    align-items: center;
-    width: 350px;
-    height: 700px;
-    
+    display: flex; /* Usando Flexbox */
+    align-items: center; /* Alinha os itens verticalmente no centro */
     background-color: var(--cor-azul-suave);
     padding: 10px 10px; /* Adiciona espaçamento interno ao container */
 }
@@ -12,23 +8,15 @@
 .dashboard-vendas {
     display: flex;
     color: var(--foreground);
-    flex-direction: column; /* Coloca os cartões um em cima do outro */
+    flex-direction: row; /* Coloca os cartões lado a lado (horizontal) */
     width: 90%; /* Faz o contêiner ocupar toda a largura disponível */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
 }
 
-.card {
-    
+.produtos {
     color: var(--cor-azul-escuro);
     padding: 20px;
     border: 3px solid var(--cor-azul-escuro);
     border-radius: 15px;
-    /*width: 100%; /* Faz os cartões ocuparem toda a largura do contêiner */
 }
-/*
-#map {
-    height: 500px;
-    width: 100%;
-    border-radius: 15px;
-    border: 3px solid var(--cor-azul-escuro);
-    margin-top: 20px; /* Espaçamento entre os cartões e o mapa *//*
-}*/
+
