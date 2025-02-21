@@ -3,15 +3,15 @@ import "./globals.css";
 import React from "react";
 import HeaderComponent from "./Components/Header/Header";
 import FooterComponent from "./Components/Footer/Footer";
-import AsideDashboard from "./Aside/Aside";
+import AsideDashboard from "./Components/Aside/Aside";
 import { BrowserRouter as Router,Route, Routes} from "react-router-dom";
 import 'leaflet/dist/leaflet.css';
-import CreateDashboard from "./Components/Router/dashboard";
-import CreateRelatorios from "./Components/Router/relatorios";
-import CreateGestaoUsuarios from "./Components/Router/gestao-de-usuarios"
-import CreateConfiguracoes from "./Components/Router/configuracoes";
-import CreateAnaliseDesempenho from "./Components/Router/analise-de-desempenho";
-import CreateFeedbackClientes from "./Components/Router/feedback-de-clientes";
+import CreateDashboard from "../pages/dashboard";
+import CreateRelatorios from "../pages/relatorios";
+import CreateGestaoUsuarios from "../pages/gestao-de-usuarios"
+import CreateConfiguracoes from "../pages/configuracoes";
+import CreateAnaliseDesempenho from "../pages/analise-de-desempenho";
+import CreateFeedbackClientes from "../pages/feedback-de-clientes";
 import SectionComponent from "./Components/Section/Section";
 
 
