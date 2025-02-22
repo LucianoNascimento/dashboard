@@ -1,9 +1,11 @@
 import React from "react";
 import "./router.css";
 import "../app/globals.css";
+import HeaderComponent from "@/app/Components/Header/Header";
 const CreateConfiguracoes: React.FC = () => {
   return (
     <>
+      <HeaderComponent/>
       <div className="container-router">
         <div>
           <h1>Configurações</h1>
