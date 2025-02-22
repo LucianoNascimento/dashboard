@@ -1,7 +1,8 @@
 import React from "react";
 import "./router.css";
+import "../app/globals.css";
 
-// Componente CreateDashboard tipado corretamente como React.FC
+
 const CreateDashboard: React.FC = () => {
   return (
     <>

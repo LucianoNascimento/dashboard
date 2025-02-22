@@ -1,5 +1,6 @@
 import React from "react"
 import "./router.css"
+import "../app/globals.css";
 const CreateRelatorios:React.FC = () =>{
     return (
         <>
