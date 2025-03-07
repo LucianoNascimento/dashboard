@@ -1,4 +1,5 @@
-// HeaderComponent.tsx
+// HeaderComponent.tsx*//*
+
 import React from "react";
 import Link  from 'next/link';
 import './Header.css';
@@ -14,8 +15,7 @@ const HeaderComponent: React.FC = () => {
                     <li><Link href="/gestaoUsuarios">Gestão de Usuários</Link></li>
                     <li><Link href="/analiseDesempenho">Análise de Desempenho</Link></li>
                     <li><Link href="/configuracoes">Configurações</Link></li>
-                    <li><Link href="/feedbackClientes">Feedback de Clientes</Link>
-</li>
+                    <li><Link href="/feedbackClientes">Feedback de Clientes</Link></li>
                 </ul>
             </div>
         </header>

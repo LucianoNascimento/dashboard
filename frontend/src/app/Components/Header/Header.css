@@ -35,3 +35,37 @@
     color: var(--cor-primaria); /* Cor do link no hover */
     text-decoration: underline; /* Aplica o sublinhado */
 }
+
+/* Responsividade: Mostrar o botão de menu e ocultar os itens de navegação em telas pequenas */
+@media (max-width: 768px) {
+    /* Esconder os itens de menu na versão mobile */
+    ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: transparent;
+      padding: 20px;
+    }
+  
+    /* Mostrar os itens de menu quando o menu estiver aberto */
+    ul.open {
+      display: flex;
+    }
+  
+    /* Exibir o botão de hambúrguer */
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Estilo para os links no menu móvel */
+    ul li {
+      margin: 10px 0;
+    }
+  
+    ul li a {
+      font-size: 18px;
+    }
+  }

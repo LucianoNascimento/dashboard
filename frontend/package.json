@@ -13,6 +13,7 @@
     "@react-google-maps/api": "^2.20.6",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
+    "chart.js": "^4.4.8",
     "leaflet": "^1.9.4",
     "next": "^15.1.7",
     "react": "^19.0.0",
@@ -23,6 +24,7 @@
     "save": "^2.9.0"
   },
   "devDependencies": {
+    "@types/chart.js": "^2.9.41",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
