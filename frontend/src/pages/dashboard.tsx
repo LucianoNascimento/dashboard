@@ -1,74 +1,41 @@
-"use client"
-import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
-import "./router.css";
-import "../app/globals.css";
+// src/app/CreateDashboard.tsx
+import React from "react";
+import "./router.css";  // Certifique-se de que está estilizando corretamente
+import "../app/globals.css";  // Se necessário, importando estilos globais
 import HeaderComponent from "@/app/Components/Header/Header";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/app/Components/ui/card" ;
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/app/Components/ui/chart";
+import ChartComponent from "../pages/chart";  // Importando o ChartComponent
 
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-]
-
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig
-
-export function Component() {
+const CreateDashboard: React.FC = () => {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Bar Chart - Multiple</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="month"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="dashed" />}
-            />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-          </BarChart>
-        </ChartContainer>
-      </CardContent>
-      <CardFooter >
-        <div className="flex-col items-start gap-2 text-sm">
-          <div className="flex gap-2 font-medium leading-none">
-            Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+    <>
+      <HeaderComponent />  {/* Importando o HeaderComponent */}
+      
+      <div className="container-dashboard">
+        {/* Seção de Introdução */}
+        <section className="intro-section">
+          <p>Bem-vindo ao painel de controle, onde você pode ver suas principais métricas e informações!</p>
+        </section>
+        
+        {/* Cards com as métricas */}
+        <div className="cards-container">
+          <div className="card">
+            <h2>Métricas Gerais</h2>
+            <p>Aqui estão as métricas mais recentes do seu sistema.</p>
           </div>
-          <div className="leading-none text-muted-foreground">
-            Showing total visitors for the last 6 months
+          <div className="card">
+            <h2>Relatórios</h2>
+            <p>Relatórios detalhados sobre o desempenho da plataforma.</p>
           </div>
         </div>
-      </CardFooter>
-    </Card>
-  )
-}
+
+        {/* Gráfico detalhado */}
+        <div className="chart-section">
+          <h2>Vendas Mensais</h2>
+          <ChartComponent />  {/* Renderizando o gráfico */}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default CreateDashboard;

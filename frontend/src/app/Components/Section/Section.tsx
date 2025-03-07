@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"; // Importando diretamente os componentes do Google Maps
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import "./Section.css";
 
 const SectionComponent: React.FC = () => {

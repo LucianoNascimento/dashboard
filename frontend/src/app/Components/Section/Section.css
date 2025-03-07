@@ -29,3 +29,19 @@
     background-color: blueviolet;
   }
   
+  /* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Muda para uma coluna em telas pequenas */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .container-section {
+    max-width: 100%;
+    margin-bottom: 20px; /* Espaço entre a section e o mapa */
+  }
+
+  .map-container {
+    height: 300px; /* Reduz a altura do mapa em telas menores */
+  }
+}
