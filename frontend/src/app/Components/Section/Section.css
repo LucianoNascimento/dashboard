@@ -1,0 +1,47 @@
+/* Container geral que organiza a section e o mapa lado a lado */
+.dashboard-container {
+    display: flex;
+    
+  }
+  
+  /* Estilo para a section */
+  .container-section {
+    display: flex;
+    flex-direction: column; /* Coloca o conteúdo da section em coluna */
+    width: 30%; /* Largura fixa da section */
+    background-color: var(--cor-fundo-cinza-claro);
+    padding: 10px;
+   
+  }
+  
+  /* Estilo para os filtros de vendas e produtos */
+  .produtos {
+    color: var(--cor-azul-escuro);
+    padding: 20px;
+    border: 3px solid var(--cor-azul-escuro);
+    border-radius: 15px;
+    margin-bottom: 20px; /* Espaçamento entre as seções */
+  }
+  
+  /* Estilo para o contêiner do mapa */
+  .map-container {
+    flex: 1; /* O mapa ocupa o restante do espaço */
+    background-color: blueviolet;
+  }
+  
+  /* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Muda para uma coluna em telas pequenas */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .container-section {
+    max-width: 100%;
+    margin-bottom: 20px; /* Espaço entre a section e o mapa */
+  }
+
+  .map-container {
+    height: 300px; /* Reduz a altura do mapa em telas menores */
+  }
+}

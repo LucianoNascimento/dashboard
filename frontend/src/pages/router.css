@@ -1,0 +1,100 @@
+
+.container-router{
+    background-color: var(--cor-fundo-cinza-escuro);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 30px;
+}
+
+
+/*dashboard*/
+/* router.css */
+
+/* Definindo a largura da área do dashboard */
+.container-dashboard {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Seção de introdução */
+  .intro-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .intro-section h1 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+  }
+  
+  .intro-section p {
+    font-size: 1.2rem;
+    color: #7F8C8D;
+  }
+  
+  /* Layout para os cards */
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Para tornar os cards responsivos */
+  }
+  
+  /* Estilo de cada card */
+  .card {
+    background-color: #ECF0F1;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%; /* Cada card vai ocupar 45% da largura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efeito de hover nos cards */
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #34495E;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #7F8C8D;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

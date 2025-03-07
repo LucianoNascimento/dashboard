@@ -1,0 +1,26 @@
+.container-footer {
+    font-size: var(--fonte-normal);
+    margin: 0%;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--cor-fundo-cinza-escuro);
+    text-align: left;
+    bottom: 0; /* Alinha à parte inferior */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    padding-bottom: 20px;
+    padding: 20px;
+}
+ 
+ a {
+    color: var(--cor-branca);
+    text-decoration: none; /* Remove sublinhado */
+}
+
+ a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}

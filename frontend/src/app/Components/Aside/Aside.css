@@ -1,0 +1,40 @@
+/* Estilo geral para o contêiner */
+.container {
+    display: flex; /* Usa Flexbox para organizar lado a lado */
+    gap: 20px; /* Adiciona espaçamento entre o aside e o section */
+  }
+  
+  /* Estilo do aside */
+  .container-aside {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Organiza o conteúdo do aside verticalmente */
+    width: 250px; /* Largura fixa do aside */
+    align-items: center; /* Alinha itens no centro */
+    background-color: var(--cor-azul-suave);
+    padding: 10px;
+  }
+  
+  /* Estilo do container principal (section) */
+  .map-container {
+    display: flex;
+    flex: 1; /* Faz a section ocupar o restante do espaço */
+    background-color: blueviolet;
+    padding: 20px;
+  }
+  
+  /* Estilo do contêiner de vendas */
+  .dashboard-vendas {
+    display: flex; /* Flexbox para os itens ficarem lado a lado */
+    flex-direction: row; /* Organiza os itens horizontalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+  
+  /* Estilo dos produtos */
+  .produtos {
+    color: var(--cor-azul-escuro);
+    padding: 20px;
+    border: 3px solid var(--cor-azul-escuro);
+    border-radius: 15px;
+  }
+  
