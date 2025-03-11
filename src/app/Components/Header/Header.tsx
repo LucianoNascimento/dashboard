@@ -2,7 +2,7 @@ import React from "react";
 import Link  from 'next/link';
 import './Header.css';
 
-const HeaderComponent: React.FC = () => {
+export function HeaderComponent ()  {
     return (
         <header>
             <div className='container-header' id="sidebar">
@@ -20,4 +20,4 @@ const HeaderComponent: React.FC = () => {
     );
 };
 
-export default HeaderComponent;
+

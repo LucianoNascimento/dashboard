@@ -1,7 +1,7 @@
 import React from "react";
 import "./router.css";  // Certifique-se de que está estilizando corretamente
 import "../app/globals.css";  // Se necessário, importando estilos globais
-import HeaderComponent from "@/app/Components/Header/Header";
+import {HeaderComponent} from "@/app/Components/Header/Header";
 import ChartComponent from "../pages/chart";  // Importando o ChartComponent
 
 const CreateDashboard: React.FC = () => {

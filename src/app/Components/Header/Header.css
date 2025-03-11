@@ -4,14 +4,12 @@
     background-color: var(--cor-azul-escuro);
     padding: 20px;
     height: 70px;
-}
-.container-header h2 {
     color: var(--cor-branca);
     text-decoration: none; /* Sem sublinhado por padrão */
     transition: color 0.3s ease, text-decoration 0.3s ease; /* Suaviza transições */
     
 }
-.container-header h2:hover {
+.container-header a:hover {
     color: var(--cor-primaria); /* Cor do link no hover */
     text-decoration: underline; /* Aplica o sublinhado */
 }

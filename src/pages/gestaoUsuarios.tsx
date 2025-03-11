@@ -1,75 +1,119 @@
-import React from "react";
-import "./router.css";
-import "../app/globals.css";
-import HeaderComponent from "@/app/Components/Header/Header";
-const CreateGestaoUsuarios: React.FC = () => {
+import FooterComponent from "@/app/Components/Footer/Footer";
+import {HeaderComponent} from "@/app/Components/Header/Header";
+import React, { useState } from "react";
+
+const usersData = [
+  { id: 1, name: "João Silva", email: "joao.silva@email.com" },
+  { id: 2, name: "Maria Oliveira", email: "maria.oliveira@email.com" },
+  { id: 3, name: "Carlos Pereira", email: "carlos.pereira@email.com" },
+];
+
+const GestaoUsuarios: React.FC = () => {
+  const [users, setUsers] = useState(usersData);
+  const [newUser, setNewUser] = useState({ name: "", email: "" });
+
+  const handleAddUser = () => {
+    const newUserId = users.length + 1;
+    setUsers([...users, { id: newUserId, ...newUser }]);
+    setNewUser({ name: "", email: "" }); // Limpa os campos após adicionar
+  };
+
+  const handleDeleteUser = (id: number) => {
+    setUsers(users.filter(user => user.id !== id));
+  };
+
+  const handleEditUser = (id: number, updatedName: string, updatedEmail: string) => {
+    setUsers(
+      users.map(user => 
+        user.id === id 
+          ? { ...user, name: updatedName, email: updatedEmail } 
+          : user
+      )
+    );
+  };
+
   return (
-    <>
-    <HeaderComponent/>
-      <div className="container-router">
-        <div>
-          <h1>Gestão de Usuários</h1>
-          <p>Administre os usuários do sistema: adicione, edite ou remova usuários conforme necessário.</p>
-        </div>
+    <div className="container mx-auto p-6">
+      {/* Header Component */}
+      <HeaderComponent />
       
-        <div className="user-list">
-          <h2>Lista de Usuários</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>João Silva</td>
-                <td>joao.silva@email.com</td>
-                <td>
-                  <button className="edit-btn">Editar</button>
-                  <button className="delete-btn">Excluir</button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Maria Oliveira</td>
-                <td>maria.oliveira@email.com</td>
-                <td>
-                  <button className="edit-btn">Editar</button>
-                  <button className="delete-btn">Excluir</button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Carlos Pereira</td>
-                <td>carlos.pereira@email.com</td>
-                <td>
-                  <button className="edit-btn">Editar</button>
-                  <button className="delete-btn">Excluir</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <h2 className="text-2xl font-semibold mb-4">Gestão de Usuários</h2>
 
-        <div className="add-user">
-          <h2>Adicionar Novo Usuário</h2>
-          <form>
-            <label htmlFor="name">Nome:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-
-            <button type="submit">Adicionar Usuário</button>
-          </form>
+      <div className="bg-white p-4 shadow-md mb-6">
+        <h3 className="text-xl font-medium mb-2">Adicionar Novo Usuário</h3>
+        <div className="flex gap-4 mb-4">
+          <input
+            type="text"
+            placeholder="Nome"
+            className="border p-2 rounded-md w-full"
+            value={newUser.name}
+            onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="border p-2 rounded-md w-full"
+            value={newUser.email}
+            onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
+          />
+          <button
+            onClick={handleAddUser}
+            className="bg-green-500 text-white p-2 rounded-md"
+          >
+            Adicionar Usuário
+          </button>
         </div>
       </div>
-    </>
+
+      <div className="bg-white p-4 shadow-md">
+        <h3 className="text-xl font-medium mb-2">Lista de Usuários</h3>
+        <table className="min-w-full table-auto">
+          <thead>
+            <tr>
+              <th className="border px-4 py-2">ID</th>
+              <th className="border px-4 py-2">Nome</th>
+              <th className="border px-4 py-2">Email</th>
+              <th className="border px-4 py-2">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user.id}>
+                <td className="border px-4 py-2">{user.id}</td>
+                <td className="border px-4 py-2">
+                  <input
+                    type="text"
+                    className="border p-2 rounded-md w-full"
+                    value={user.name}
+                    onChange={(e) => handleEditUser(user.id, e.target.value, user.email)}
+                  />
+                </td>
+                <td className="border px-4 py-2">
+                  <input
+                    type="email"
+                    className="border p-2 rounded-md w-full"
+                    value={user.email}
+                    onChange={(e) => handleEditUser(user.id, user.name, e.target.value)}
+                  />
+                </td>
+                <td className="border px-4 py-2 flex gap-2">
+                  <button
+                    onClick={() => handleDeleteUser(user.id)}
+                    className="bg-red-500 text-white p-2 rounded-md"
+                  >
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Footer Component */}
+      <FooterComponent />
+    </div>
   );
 };
 
-export default CreateGestaoUsuarios;
+export default GestaoUsuarios;

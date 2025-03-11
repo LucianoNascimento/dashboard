@@ -1,15 +1,17 @@
 "use client";
 import "./globals.css";
 import React from "react";
-import HeaderComponent from "./Components/Header/Header";
+import {HeaderComponent} from "./Components/Header/Header";
 import FooterComponent from "./Components/Footer/Footer";
 import 'leaflet/dist/leaflet.css';
 import SectionComponent from "./Components/Section/Section";
+import { Layout } from "lucide-react";
 
 
 export default function Home() {
   return (
     <div>
+      <Layout>
         <HeaderComponent/>
             <link href="/inicio"/>
             <link href="/dashboard"/>
@@ -20,6 +22,7 @@ export default function Home() {
             <link href="/feedbackClientes"/>
         <SectionComponent/>
         <FooterComponent/>
+      </Layout>
     </div>
   );
 }
