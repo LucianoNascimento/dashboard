@@ -1,7 +1,7 @@
 import React from "react";
 import "./router.css";
 import "../app/globals.css";
-import HeaderComponent from "@/app/Components/Header/Header";
+import {HeaderComponent} from "@/app/Components/Header/Header";
 const CreateConfiguracoes: React.FC = () => {
   return (
     <>

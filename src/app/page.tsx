@@ -1,7 +1,7 @@
 "use client";
 import "./globals.css";
 import React from "react";
-import HeaderComponent from "./Components/Header/Header";
+import {HeaderComponent} from "./Components/Header/Header";
 import FooterComponent from "./Components/Footer/Footer";
 import 'leaflet/dist/leaflet.css';
 import SectionComponent from "./Components/Section/Section";

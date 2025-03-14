@@ -2,9 +2,15 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   experimental: {
-    // Remove turbopack if it doesn't exist in your version of Next.js
-    // turbopack: false,
+    // Any experimental flags can go here
   },
+  webpack(config) {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      child_process: false,  // Disable 'child_process' for the browser
+    };
+    return config;
+  }
 };
 
 export default nextConfig;

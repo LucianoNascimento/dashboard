@@ -1,71 +1,88 @@
+/* Estilos Gerais */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--cor-azul-escuro);
+}
+
 .container-header {
-    display: flex;
-    align-items: center;
-    background-color: var(--cor-azul-escuro);
-    padding: 20px;
-    height: 70px;
-}
-.container-header h2 {
-    color: var(--cor-branca);
-    text-decoration: none; /* Sem sublinhado por padrão */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Suaviza transições */
-    
-}
-.container-header h2:hover {
-    color: var(--cor-primaria); /* Cor do link no hover */
-    text-decoration: underline; /* Aplica o sublinhado */
-}
-.container-header ul  {
-    display: flex;
-    padding: 20px;
-    justify-content: center;
-    list-style-type: none;
-    width: 100%;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.container-header ul li a {
-    color: var(--cor-branca); /* Cor padrão do link */
-    text-decoration: none; /* Sem sublinhado por padrão */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Suaviza transições */
-    padding: 5px 10px; /* Adiciona um pouco de espaço ao redor do link */
+ul {
+  display: flex;
+  gap:20px;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
 }
 
-.container-header ul li a:hover {
-    color: var(--cor-primaria); /* Cor do link no hover */
-    text-decoration: underline; /* Aplica o sublinhado */
+ul li a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Responsividade: Mostrar o botão de menu e ocultar os itens de navegação em telas pequenas */
+ul li a:hover {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+/* Estilo do botão de hambúrguer */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: var(--cor-branca);
+  cursor: pointer;
+  position: relative;
+  top: 50%; /* Centraliza verticalmente */
+  left: 40%; /* Afastamento de 15px da borda direita */
+  transform: translateY(-50%);
+}
+
+
+/* Menu Responsivo */
 @media (max-width: 768px) {
-    /* Esconder os itens de menu na versão mobile */
-    ul {
+  /* Exibir o botão de menu (hambúrguer) em telas menores */
+  .menu-toggle {
+      display: block;
+
+  }
+
+  /* O menu de navegação ficará oculto em telas pequenas */
+  ul {
       display: none;
       flex-direction: column;
       width: 100%;
       position: absolute;
-      top: 60px;
+      top: 60px; /* Ajuste conforme a altura do header */
       left: 0;
-      background-color: transparent;
+      background-color: var(--cor-azul-escuro);
       padding: 20px;
-    }
-  
-    /* Mostrar os itens de menu quando o menu estiver aberto */
-    ul.open {
-      display: flex;
-    }
-  
-    /* Exibir o botão de hambúrguer */
-    .menu-toggle {
-      display: block;
-    }
-  
-    /* Estilo para os links no menu móvel */
-    ul li {
-      margin: 10px 0;
-    }
-  
-    ul li a {
-      font-size: 18px;
-    }
   }
+
+  /* Quando o menu estiver aberto */
+  ul.open {
+      display: flex;
+  }
+
+  /* Links dentro do menu */
+  ul li a {
+      padding: 10px;
+      font-size: 18px;
+      text-align: center;
+      color: var(--cor-branca);
+  }
+
+  /* Adiciona um efeito ao clicar no ícone */
+  .menu-toggle:focus {
+      outline: none;
+  }
+}
