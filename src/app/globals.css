@@ -37,9 +37,7 @@ a{
   --fonte-normal: 20px;
 }
 
-h2{
-  color: var(--cor-branca);
-}
+
 
 @layer base {
   :root {

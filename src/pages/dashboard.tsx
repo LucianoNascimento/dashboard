@@ -9,7 +9,7 @@ const CreateDashboard: React.FC = () => {
     <>
       <HeaderComponent />  {/* Importando o HeaderComponent */}
       
-      <div className="container-dashboard">
+      <div className="container-router container-dashboard">
         {/* Seção de Introdução */}
         <section className="intro-section">
           <p>Bem-vindo ao painel de controle, onde você pode ver suas principais métricas e informações!</p>
