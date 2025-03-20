@@ -1,7 +1,8 @@
 import './Footer.css';
+//import '@/app/globals.css';
 import React from "react";
 
-const FooterComponent: React.FC = () => {
+export function FooterComponent() {
   return (
     <footer className='container-footer'>
       <div className="contact">
@@ -13,11 +14,12 @@ const FooterComponent: React.FC = () => {
         </div>
         <div className="social-media">
           <h2>Redes Sociais</h2>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
+            <div className='redes-links'>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+
         </div>
         <div className="additional-info">
           <h2>Informações</h2>
@@ -26,6 +28,4 @@ const FooterComponent: React.FC = () => {
       </div>
     </footer>
   );
-};
-
-export default FooterComponent;
+}

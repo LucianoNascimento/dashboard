@@ -8,14 +8,15 @@ body {
 *{
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo de tamanho */
 }
-/*
+
+
 a{
   text-decoration: none;
   color: var(--cor-branca);
 }
-*/
+
 
 :root{
   --cor-primaria: #43bd8e;
