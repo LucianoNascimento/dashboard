@@ -1,7 +1,6 @@
 /* Container geral que organiza a section e o mapa lado a lado */
 .dashboard-container {
     display: flex;
-    
   }
   
   /* Estilo para a section */
@@ -37,8 +36,8 @@
   }
 
   .container-section {
-    max-width: 100%;
-    margin-bottom: 20px; /* Espaço entre a section e o mapa */
+    width: 100%;
+    /*margin-bottom: 20px; /* Espaço entre a section e o mapa */
   }
 
   .map-container {

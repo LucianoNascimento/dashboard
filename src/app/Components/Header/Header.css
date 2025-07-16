@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: var(--cor-azul-escuro);
+  background-color: var(--cor-fundo-cinza-escuro);
 }
 
 .container-header {
@@ -17,8 +17,10 @@
 ul {
   display: flex;
   gap:20px;
+  align-items: center;
+  text-align: center;
   list-style: none;
-  gap: 30px;
+  gap: 20px;
   padding: 0;
 }
 
@@ -44,7 +46,7 @@ ul li a:hover {
   position: relative;
   top: 50%; /* Centraliza verticalmente */
   left: 40%; /* Afastamento de 15px da borda direita */
-  transform: translateY(-50%);
+  transform: translateY(0%);
 }
 
 
@@ -53,29 +55,29 @@ ul li a:hover {
   /* Exibir o botão de menu (hambúrguer) em telas menores */
   .menu-toggle {
       display: block;
-
   }
 
   /* O menu de navegação ficará oculto em telas pequenas */
   ul {
       display: none;
       flex-direction: column;
-      width: 100%;
+      border-radius: 10px;
       position: absolute;
-      top: 60px; /* Ajuste conforme a altura do header */
-      left: 0;
-      background-color: var(--cor-azul-escuro);
+      justify-content: flex-start;
+      top: 100px; /* Ajuste conforme a altura do header */ 
+      right: 0;
+      background-color: var(--cor-fundo-cinza-escuro);
       padding: 20px;
   }
 
   /* Quando o menu estiver aberto */
   ul.open {
-      display: flex;
+    display: flex;   
+    gap:10px;
   }
-
   /* Links dentro do menu */
   ul li a {
-      padding: 10px;
+      display: block;
       font-size: 18px;
       text-align: center;
       color: var(--cor-branca);

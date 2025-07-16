@@ -20,12 +20,12 @@ a{
 
 :root{
   --cor-primaria: #43bd8e;
-  --cor-azul-claro: #d0f0fd;
+  --cor-azul-claro:rgb(173, 215, 242);
   --cor-azul-suave:#9cb2df;
   --cor-branca: #FFFF;
   --cor-fundo-escuro: #040203;
-  --cor-fundo-cinza-escuro: #282828;
-  --cor-fundo-cinza-claro: #ccc;
+  --cor-fundo-cinza-escuro:#17171b;
+  --cor-fundo-cinza-claro:rgb(194, 186, 186);
   --cor-azul-escuro: #2c3e50;
 }
 

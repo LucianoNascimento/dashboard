@@ -25,6 +25,7 @@ export function FooterComponent() {
           <h2>Informações</h2>
           <p>© 2024 Meu Site. Todos os direitos reservados.</p>
         </div>
+        <footer></footer>
       </div>
     </footer>
   );
